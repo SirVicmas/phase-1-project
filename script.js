@@ -25,18 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.classList.add("card");
 
+      // Create and append image
       const image = document.createElement("img");
       image.src = attraction.image;
       card.appendChild(image);
 
+      // Create and append name
       const name = document.createElement("h2");
       name.textContent = attraction.name;
       card.appendChild(name);
 
+      // Create and append description
       const description = document.createElement("p");
       description.textContent = attraction.description;
       card.appendChild(description);
 
+      // Create and append Like button
       const likeButton = document.createElement("button");
       likeButton.textContent = "Like";
       likeButton.addEventListener("click", () => {
@@ -45,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       card.appendChild(likeButton);
 
+      // Create and append Likes count
       const likesCount = document.createElement("span");
       likesCount.textContent = attraction.likes + " Likes";
       card.appendChild(likesCount);
@@ -53,19 +58,21 @@ document.addEventListener("DOMContentLoaded", () => {
       const reviewSection = document.createElement("div");
       reviewSection.classList.add("review-section");
 
+      // Create and append Review Title
       const reviewTitle = document.createElement("h3");
       reviewTitle.textContent = "Reviews";
       reviewSection.appendChild(reviewTitle);
 
+      // Create and append Review List
       const reviewList = document.createElement("ul");
       attraction.reviews.forEach(review => {
         const listItem = document.createElement("li");
         listItem.textContent = review;
         reviewList.appendChild(listItem);
       });
-
       reviewSection.appendChild(reviewList);
 
+      // Create and append Review Input and Add Review Button
       const reviewInput = document.createElement("input");
       reviewInput.setAttribute("type", "text");
       reviewInput.setAttribute("placeholder", "Write a review...");
@@ -87,19 +94,21 @@ document.addEventListener("DOMContentLoaded", () => {
       const inquirySection = document.createElement("div");
       inquirySection.classList.add("inquiry-section");
 
+      // Create and append Inquiry Title
       const inquiryTitle = document.createElement("h3");
       inquiryTitle.textContent = "Inquiries";
       inquirySection.appendChild(inquiryTitle);
 
+      // Create and append Inquiry List
       const inquiryList = document.createElement("ul");
       attraction.inquiries.forEach(inquiry => {
         const listItem = document.createElement("li");
         listItem.textContent = inquiry;
         inquiryList.appendChild(listItem);
       });
-
       inquirySection.appendChild(inquiryList);
 
+      // Create and append Inquiry Input and Ask Button
       const inquiryInput = document.createElement("input");
       inquiryInput.setAttribute("type", "text");
       inquiryInput.setAttribute("placeholder", "Ask a question...");
@@ -117,9 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       inquirySection.appendChild(askButton);
 
+      // Append Inquiry and Review sections to card
       card.appendChild(inquirySection);
       card.appendChild(reviewSection);
 
+      // Append card to the attraction gallery
       attractionGallery.appendChild(card);
     });
   }
@@ -138,6 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     inquiryList.appendChild(listItem);
   }
 
+  // Function to update the number of likes displayed
   function updateLikesCount(card, likes) {
     const likesCount = card.querySelector("span");
     likesCount.textContent = likes + " Likes";
