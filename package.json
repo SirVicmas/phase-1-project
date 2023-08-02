@@ -1,0 +1,20 @@
+{
+  "name": "phase-1-project",
+  "version": "1.0.0",
+  "description": "tourify app",
+  "main": "script.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "phase-1-project"
+  },
+  "author": "Masibo",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "json-serve": "^0.1.0",
+    "json-server": "^0.17.3"
+  }
+}

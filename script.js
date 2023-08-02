@@ -1,3 +1,15 @@
+const jsonServer = require("json-server"); // importing json-server library
+const server = jsonServer.create();
+const router = jsonServer.router("db.json");
+const middlewares = jsonServer.defaults();
+const port = process.env.PORT || 3001; // you can use any port number here; i chose to use 3001
+
+server.use(middlewares);
+server.use(router);
+
+server.listen(port);
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const attractionGallery = document.getElementById("attraction-gallery");
 
@@ -133,6 +145,17 @@ document.addEventListener("DOMContentLoaded", () => {
       // Append card to the attraction gallery
       attractionGallery.appendChild(card);
     });
+    
+    // Function to update the likes on the server
+    function updateAttractionLikes(attractionId, likes) {
+    fetch(`http://localhost:3000/attractions/${attractionId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ likes }),
+    });
+  }
   }
 
   // Function to update the review list
