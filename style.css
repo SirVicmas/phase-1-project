@@ -1,0 +1,144 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7; /* Light gray background */
+    color: #333; /* Dark gray text */
+}
+
+/* Header styles */
+header {
+    background-color: #007bff; /* Blue header background */
+    color: #fff; /* White text */
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+      /* Add the transition properties */
+    transition-property: color, font-size;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+  
+  header h1 {
+    margin: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Attraction card styles */
+.card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #fff; /* White card background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: box-shadow 0.3s ease; /* Smooth box-shadow transition */
+}
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+  
+  .card h2 {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 0;
+ }
+  
+  .card p {
+    margin-top: 5px;
+}
+
+.card button {
+    background-color: #193261;
+    color: rgb(250, 246, 241);
+    max-width: 15%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.card button:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Like button styles */
+.like-button {
+    display: inline-block;
+    margin-right: 5px;
+}
+  
+  .like-count {
+    display: inline-block;
+    color: #007bff;
+    font-weight: bold;
+}
+/* Style for review section */
+.review-section {
+    margin-top: 20px;
+} 
+
+.review-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0;
+}
+
+/* Add review button styles */
+.add-review-button {
+    background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+ }
+
+.add-review-button:hover {
+    background-color: #0056b3;
+}
+
+}
+
+/* Scroll to top button styles */
+#scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  z-index: 99;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+#scroll-to-top:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
